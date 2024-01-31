@@ -1,0 +1,45 @@
+.container {
+    width: 100vw;
+    background-color: black;
+}
+
+.header {
+    display: flex;
+    // justify-content: center;
+    width: 100%;
+    height: 150px;
+    color: #232b2b;
+    font-size: 48px;
+}
+
+.span {
+    position: relative;
+    display: inline-block;
+    padding: 17px;
+    white-space: nowrap;
+}
+
+%span-letter {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+    // font-family: "Permanent Marker", cursive
+}
+
+.span-bottom {
+    @extend %span-letter;
+    z-index: 3;
+
+}
+
+.span-top {
+    @extend %span-letter;
+    color: blueviolet;
+    z-index: 4;
+    // clip-path: inset(0% 0px 0px 0px);
+
+}
