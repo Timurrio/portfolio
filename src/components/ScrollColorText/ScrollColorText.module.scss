@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.span {
+    position: relative;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    white-space: nowrap;
+    font-size: 70px;
+    font-weight: 700;
+    color: #232b2b;
+
+}
+
+
+%span-letter {
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.span-bottom {
+    @extend %span-letter;
+    z-index: 3;
+
+}
+
+.span-top {
+    @extend %span-letter;
+    z-index: 4;
+
+}
