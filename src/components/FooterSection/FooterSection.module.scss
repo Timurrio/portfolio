@@ -1,20 +1,63 @@
 .container {
     width: 100vw;
-    background-color: black;
+    background-color: #151515;
 }
-
 
 .scroll-container {
     display: flex;
-    justify-content: center;
-    height: 1000px;
+    flex-direction: column;
+    align-items: center;
     padding: 100px 0px;
 }
 
-.header {
+.footer-header {
     display: flex;
+    max-width: 100%;
+    margin: 0px 10px;
+}
+
+.mail-button-wrapper {
+    margin: 75px 10px 0px;
+    background: linear-gradient(to right, #de6161, #2657eb);
+    width: fit-content;
+    max-width: 100%;
+    padding: 2px;
+    border-radius: 20px;
+
+}
+
+.mail-button-link {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.mail-button {
+    background: #151515;
+    padding: 10px 35px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(to right, #de6161, #2657eb);
+        transition: all 0.3s ease;
+    }
+}
+
+.copyright-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
     width: 100%;
-    height: 150px;
-    color: #232b2b;
-    font-size: 48px;
+    max-width: 900px;
+}
+
+.copyright-text {
+    color: white;
+    font-size: 18px;
+}
+
+.copyright-icons {
+    display: flex;
 }
