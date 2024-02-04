@@ -1,0 +1,21 @@
+.icon {
+    width: 50px;
+    height: 50px;
+    color: #2657eb;
+    transition: all 0.25s;
+
+    &:hover {
+        color: #de6161;
+    }
+}
+
+
+.icon-wrapper {
+    width: fit-content;
+    height: fit-content;
+    margin: 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

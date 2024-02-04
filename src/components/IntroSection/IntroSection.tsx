@@ -1,7 +1,8 @@
 import styles from "./IntroSection.module.scss"
 import portrait from "../../assets/placeholderportrait.jpg"
 import { motion } from "framer-motion"
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { GithubIcon } from "../Icons/GithubIcon";
+import { LinkedinIcon } from "../Icons/LinkedinIcon"
 
 const portraitHeaderVariants = {
     hidden: {
@@ -52,24 +53,8 @@ const IntroSection = () => {
                     <h1 className={styles["info-header"]}>FRONTEND REACT DEVELOPER</h1>
                     <p className={styles["info-text"]}>Hi, I`m Tymur Myronenko, a frontend react developer based in Kryvyi Rih, Ukraine. Currently, a <a target="_blank" href="https://www.duet.edu.ua/en" rel="noreferrer" className={styles.link}>State University of Economics and Technology (SUET)</a> student, earning a Bachelors Degree in Computer Science </p>
                     <div className={styles["info-icons"]}>
-                        <a href="https://github.com/Timurrio" target="_blank" rel="noreferrer" >
-                            <motion.div className={styles["icon-wrapper"]}
-                                whileHover={{ scale: 1.2 }}
-                                whileTap={{ scale: 0.85 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                            >
-                                <FaGithub className={styles.icon} />
-                            </motion.div>
-                        </a>
-                        <a href="https://github.com/Timurrio" target="_blank" rel="noreferrer" >
-                            <motion.div className={styles["icon-wrapper"]}
-                                whileHover={{ scale: 1.2 }}
-                                whileTap={{ scale: 0.85 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                            >
-                                <FaLinkedin className={styles.icon} />
-                            </motion.div>
-                        </a>
+                        <GithubIcon />
+                        <LinkedinIcon />
                     </div>
                 </motion.div>
             </div>

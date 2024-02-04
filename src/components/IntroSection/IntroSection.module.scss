@@ -4,7 +4,6 @@
     width: 100vw;
     // background-color: #1C1C1C;
     background-color: #151515;
-
     min-height: 100vh;
 }
 
@@ -44,15 +43,6 @@
     line-height: 135%;
 }
 
-.icon-wrapper {
-    width: fit-content;
-    height: fit-content;
-    margin: 10px;
-
-    &:hover {
-        cursor: pointer;
-    }
-}
 
 .info-icons {
     margin-top: 30px;
@@ -60,17 +50,6 @@
     flex-direction: row;
 }
 
-
-.icon {
-    width: 50px;
-    height: 50px;
-    color: #2657eb;
-    transition: all 0.25s;
-
-    &:hover {
-        color: #de6161;
-    }
-}
 
 .portrait-container {
     position: relative;
@@ -91,7 +70,6 @@
     position: absolute;
     right: -50px;
     bottom: -10px;
-    // background-color: black;
     background-image: url("../../assets/inkBg.png");
     background-repeat: no-repeat;
     background-size: 130% 100%;
@@ -103,9 +81,6 @@
 }
 
 .portrait-header {
-    // position: absolute;
-    // right: -50px;
-    // bottom: -10px;
     display: inline;
     z-index: 10;
     font-family: "Permanent Marker", cursive;
@@ -113,7 +88,6 @@
     font-style: normal;
     font-size: 50px;
     white-space: nowrap;
-    // color: white;
     background-image: linear-gradient(to right, #de6161, #2657eb);
     background-clip: text;
     -webkit-text-fill-color: transparent;
