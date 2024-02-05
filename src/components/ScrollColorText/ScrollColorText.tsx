@@ -17,8 +17,8 @@ export const ScrollColorText = ({ target, text, colors = ["#2657eb", "#2657eb"],
     return (
         <div className={styles.container}>
             {
-                text.split("").map((letter) => (
-                    <span className={styles.span}>
+                text.split("").map((letter, index) => (
+                    <span className={styles.span} key={index}>
                         <span aria-hidden className={styles["span-bottom"]}>{letter}</span>
                         <motion.span
                             aria-hidden
