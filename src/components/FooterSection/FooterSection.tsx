@@ -12,9 +12,9 @@ export const FooterSection = () => {
         <footer className={styles.container}>
             <div ref={scrollContainerRef} className={styles["scroll-container"]}>
                 <div className={styles["footer-header"]}>
-                    <ScrollColorText colors={["white", "white"]} target={scrollContainerRef} text="LET`S" scrollOffset={["end end", "start end"]} />
-                    <ScrollColorText colors={["white", "white"]} target={scrollContainerRef} text="WORK" scrollOffset={["end end", "start end"]} />
-                    <ScrollColorText colors={["#de6161", "#2657eb"]} target={scrollContainerRef} text="TOGETHER!" scrollOffset={["end end", "start end"]} />
+                    <ScrollColorText colors={["white", "white"]} target={scrollContainerRef} text="LET`S" scrollOffset={["start end", "end end"]} />
+                    <ScrollColorText colors={["white", "white"]} target={scrollContainerRef} text="WORK" scrollOffset={["start end", "end end"]} />
+                    <ScrollColorText colors={["#de6161", "#2657eb"]} target={scrollContainerRef} text="TOGETHER!" scrollOffset={["start end", "end end"]} />
                 </div>
 
                 <div className={styles["mail-button-wrapper"]}>

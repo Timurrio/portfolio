@@ -11,9 +11,9 @@ interface ScrollColorTextProps {
 
 export const ScrollColorText = ({ target, text, colors = ["#2657eb", "#2657eb"], scrollOffset = ["start start", "start end"] }: ScrollColorTextProps) => {
     // @ts-ignore
-    const { scrollYProgress } = useScroll({ target: target, offset: scrollOffset, layoutEffect: false })
-    const textFillProgress = useTransform(useSpring(scrollYProgress), [0, 1], ["inset(0% 0% 0% 0%)", "inset(100% 0% 0% 0%)"])
-    const colorsTransform = useTransform(scrollYProgress, [0, 1], [colors[1], colors[0]])
+    const { scrollYProgress } = useScroll({ target: target, offset: scrollOffset })
+    const textFillProgress = useTransform(useSpring(scrollYProgress), [0, 1], ["inset(100% 0% 0% 0%)", "inset(0% 0% 0% 0%)"])
+    const colorsTransform = useTransform(scrollYProgress, [0, 1], [colors[0], colors[1]])
     return (
         <div className={styles.container}>
             {
