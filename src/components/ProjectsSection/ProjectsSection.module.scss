@@ -1,4 +1,7 @@
 .container {
+    display: flex;
+    align-items: space-between;
+    padding: 50px;
     min-height: 100vh;
     background-color: #151515;
 
