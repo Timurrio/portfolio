@@ -5,7 +5,7 @@ import gifPlaceholder from "../../assets/placeholderGif.gif"
 
 const DescriptionPlaceholder: React.FC = () => {
     return (
-        <p>TEXT</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur atque ipsam, ipsum vitae facilis esse quis laboriosam numquam sed nulla quibusdam quod nostrum laudantium recusandae temporibus quia ex modi saepe.</p>
     )
 }
 

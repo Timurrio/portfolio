@@ -2,6 +2,7 @@ import { AnimatePresence } from "framer-motion"
 import { projectData } from "../../../types/projectData"
 import styles from "./ProjectCard.module.scss"
 import { useState } from "react"
+import { motion } from "framer-motion"
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
 import { IoMdCloseCircle } from "react-icons/io";
 
@@ -19,11 +20,11 @@ export const ProjectCard = ({ data }: ProjectCardProps) => {
             <AnimatePresence>
                 {
                     isOpen &&
-                    <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-                        <div className={styles["modal-slideshow"]}>
+                    <motion.div transition={{ duration: 0.15 }} animate={{ opacity: 1 }} exit={{ opacity: 0, transition: { delay: 0.25 } }} initial={{ opacity: 0 }} className={styles.modal} onClick={(e) => e.stopPropagation()}>
+                        <motion.div transition={{ delay: 0.075, duration: 0.5, type: "spring", stiffness: 75, damping: 16 }} animate={{ x: 0 }} exit={{ x: "-120%" }} initial={{ x: "-120%" }} className={styles["modal-slideshow"]}>
                             <img src={data.images[0]} />
-                        </div>
-                        <div className={styles["modal-description"]}>
+                        </motion.div>
+                        <motion.div transition={{ delay: 0.075, duration: 0.5, type: "spring", stiffness: 75, damping: 16 }} animate={{ x: 0 }} exit={{ x: "120%" }} initial={{ x: "120%" }} className={styles["modal-description"]}>
                             <div className={styles["description-bar"]}>
                                 <h1 className={styles["bar-header"]}>{data.header}</h1>
                                 <div className={styles["bar-links"]}>
@@ -41,9 +42,9 @@ export const ProjectCard = ({ data }: ProjectCardProps) => {
                                 {data.description}
                             </div>
 
-                        </div>
+                        </motion.div>
 
-                    </div>
+                    </motion.div>
                 }
             </AnimatePresence>
         </div>
