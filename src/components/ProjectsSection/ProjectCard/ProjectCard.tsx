@@ -29,13 +29,13 @@ export const ProjectCard = ({ data }: ProjectCardProps) => {
                                 <h1 className={styles["bar-header"]}>{data.header}</h1>
                                 <div className={styles["bar-links"]}>
                                     <a href={data.link} target="_blank" rel="noreferrer">
-                                        <button className={styles["bar-button"]}>
+                                        <motion.button whileHover={{ scale: 1.1, borderRadius: "50%" }} transition={{ duration: 0.5, type: "spring", stiffness: 400, damping: 11 }} className={styles["bar-button"]}>
                                             <LiaExternalLinkAltSolid />
-                                        </button>
+                                        </motion.button>
                                     </a>
-                                    <button className={styles["bar-button"]} onClick={() => setIsOpen(prev => !prev)}>
+                                    <motion.button whileHover={{ scale: 1.1, borderRadius: "50%" }} transition={{ duration: 0.5, type: "spring", stiffness: 400, damping: 11 }} className={styles["bar-button"]} onClick={() => setIsOpen(prev => !prev)}>
                                         <IoMdCloseCircle />
-                                    </button>
+                                    </motion.button>
                                 </div>
                             </div>
                             <div className={styles["description-info"]}>

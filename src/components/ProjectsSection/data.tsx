@@ -16,5 +16,33 @@ export const data: projectData[] = [
         images: [gifPlaceholder, imagePlaceholder, imagePlaceholder, gifPlaceholder],
         link: "https://react.dev/",
         description: <DescriptionPlaceholder />
+    },
+    {
+        previewImage: imagePlaceholder,
+        header: "PROJECT",
+        images: [gifPlaceholder, imagePlaceholder, imagePlaceholder, gifPlaceholder],
+        link: "https://react.dev/",
+        description: <DescriptionPlaceholder />
+    },
+    {
+        previewImage: imagePlaceholder,
+        header: "PROJECT",
+        images: [gifPlaceholder, imagePlaceholder, imagePlaceholder, gifPlaceholder],
+        link: "https://react.dev/",
+        description: <DescriptionPlaceholder />
+    },
+    {
+        previewImage: imagePlaceholder,
+        header: "PROJECT",
+        images: [gifPlaceholder, imagePlaceholder, imagePlaceholder, gifPlaceholder],
+        link: "https://react.dev/",
+        description: <DescriptionPlaceholder />
+    },
+    {
+        previewImage: imagePlaceholder,
+        header: "PROJECT",
+        images: [gifPlaceholder, imagePlaceholder, imagePlaceholder, gifPlaceholder],
+        link: "https://react.dev/",
+        description: <DescriptionPlaceholder />
     }
 ]
