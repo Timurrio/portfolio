@@ -5,6 +5,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
 import { IoMdCloseCircle } from "react-icons/io";
+import ProjectCardCarousel from "./ProjectCardCarousel/ProjectCardCarousel"
 
 interface ProjectCardProps {
     data: projectData
@@ -22,7 +23,9 @@ export const ProjectCard = ({ data }: ProjectCardProps) => {
                     isOpen &&
                     <motion.div transition={{ duration: 0.15 }} animate={{ opacity: 1 }} exit={{ opacity: 0, transition: { delay: 0.25 } }} initial={{ opacity: 0 }} className={styles.modal} onClick={(e) => e.stopPropagation()}>
                         <motion.div transition={{ delay: 0.075, duration: 0.5, type: "spring", stiffness: 75, damping: 16 }} animate={{ x: 0 }} exit={{ x: "-120%" }} initial={{ x: "-120%" }} className={styles["modal-slideshow"]}>
-                            <img src={data.images[0]} />
+                            <div className={styles["carousel-wrapper"]}>
+                                <ProjectCardCarousel slides={data.images} />
+                            </div>
                         </motion.div>
                         <motion.div transition={{ delay: 0.075, duration: 0.5, type: "spring", stiffness: 75, damping: 16 }} animate={{ x: 0 }} exit={{ x: "120%" }} initial={{ x: "120%" }} className={styles["modal-description"]}>
                             <div className={styles["description-bar"]}>
