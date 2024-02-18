@@ -24,10 +24,10 @@ export default function ProjectCardCarousel({ slides }: ProjectCardCarouselProps
       </motion.div>
 
       <div className={styles["slideshow-buttons"]}>
-        <motion.button whileHover={{ backgroundColor: "#2657eb", scale: 1.25 }} whileTap={{ scale: 0.85 }} transition={{ type: "spring", duration: 0.3 }} className={styles.button} onClick={() => prev()}>
+        <motion.button whileHover={{ backgroundColor: "#2657eb", scale: 1.25 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", duration: 0.4 }} className={styles.button} onClick={() => prev()}>
           <FaChevronCircleLeft size={50} />
         </motion.button>
-        <motion.button whileHover={{ backgroundColor: "#2657eb", scale: 1.25 }} whileTap={{ scale: 0.85 }} transition={{ type: "spring", duration: 0.3 }} className={styles.button} onClick={() => next()}>
+        <motion.button whileHover={{ backgroundColor: "#2657eb", scale: 1.25 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", duration: 0.4 }} className={styles.button} onClick={() => next()}>
           <FaChevronCircleRight size={50} />
         </motion.button>
       </div>

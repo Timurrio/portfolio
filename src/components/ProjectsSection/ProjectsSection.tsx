@@ -12,8 +12,8 @@ export const ProjectsSection = () => {
                     data.map((projectData, index) => (
                         <motion.div
                             whileInView={{ opacity: 1, scale: 1 }}
-                            initial={{ opacity: 0, scale: 0.7 }}
-                            transition={{ duration: 0.6, type: "just" }}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            transition={{ duration: 0.4 }}
                             viewport={{ once: true, amount: 0.5 }}
                             className={styles["card-wrapper"]}
                         >

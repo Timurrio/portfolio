@@ -11,23 +11,61 @@ interface ProjectCardProps {
     data: projectData
 }
 
+const cardVariants = {
+    hover: {
+    },
+    initial: {
+    },
+}
+
+const headerVariants = {
+    hover: {
+        color: "#2657eb",
+        width: "120%"
+    },
+    initial: {
+        color: "white",
+        width: "50%"
+    }
+}
+
+const imageVariants = {
+    hover: {
+        scale: 1.25
+    },
+    initial: {
+        scale: 1
+    }
+}
+
 export const ProjectCard = ({ data }: ProjectCardProps) => {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <div className={styles.container} onClick={() => setIsOpen(prev => !prev)}>
-            <img src={data.previewImage} alt={data.header} className={styles["preview-image"]} />
-            <h1 className={styles["preview-header"]}>{data.header}</h1>
+        <motion.div
+            variants={cardVariants}
+            initial={"initial"}
+            whileHover={"hover"}
+            transition={{ duration: 0.3 }}
+            className={styles.container}
+            onClick={() => setIsOpen(prev => !prev)}>
+            <motion.img variants={imageVariants} transition={{ duration: 0.3 }} src={data.previewImage} alt={data.header} className={styles["preview-image"]} />
+            <motion.h1 variants={headerVariants} transition={{ duration: 0.2 }} className={styles["preview-header"]}>{data.header}</motion.h1>
             <AnimatePresence>
                 {
                     isOpen &&
-                    <motion.div transition={{ duration: 0.15 }} animate={{ opacity: 1 }} exit={{ opacity: 0, transition: { delay: 0.25 } }} initial={{ opacity: 0 }} className={styles.modal} onClick={(e) => e.stopPropagation()}>
-                        <motion.div transition={{ delay: 0.075, duration: 0.5, type: "spring", stiffness: 75, damping: 16 }} animate={{ x: 0 }} exit={{ x: "-120%" }} initial={{ x: "-120%" }} className={styles["modal-slideshow"]}>
+                    <motion.div
+                        transition={{ duration: 0.15 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0, transition: { delay: 0.25 } }}
+                        initial={{ opacity: 0 }} className={styles.modal}
+                        onClick={(e) => { e.stopPropagation(); setIsOpen(prev => !prev) }}>
+                        <motion.div onClick={(e) => e.stopPropagation()} transition={{ delay: 0.075, duration: 0.5, type: "spring", stiffness: 75, damping: 16 }} animate={{ x: 0 }} exit={{ x: "-120%" }} initial={{ x: "-120%" }} className={styles["modal-slideshow"]}>
                             <div className={styles["carousel-wrapper"]}>
                                 <ProjectCardCarousel slides={data.images} />
                             </div>
                         </motion.div>
-                        <motion.div transition={{ delay: 0.075, duration: 0.5, type: "spring", stiffness: 75, damping: 16 }} animate={{ x: 0 }} exit={{ x: "120%" }} initial={{ x: "120%" }} className={styles["modal-description"]}>
+                        <motion.div onClick={(e) => e.stopPropagation()} transition={{ delay: 0.075, duration: 0.5, type: "spring", stiffness: 75, damping: 16 }} animate={{ x: 0 }} exit={{ x: "120%" }} initial={{ x: "120%" }} className={styles["modal-description"]}>
                             <div className={styles["description-bar"]}>
                                 <h1 className={styles["bar-header"]}>{data.header}</h1>
                                 <div className={styles["bar-links"]}>
@@ -50,6 +88,6 @@ export const ProjectCard = ({ data }: ProjectCardProps) => {
                     </motion.div>
                 }
             </AnimatePresence>
-        </div>
+        </motion.div>
     )
 }
