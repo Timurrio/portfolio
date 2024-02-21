@@ -1,4 +1,4 @@
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence, color } from "framer-motion"
 import { projectData } from "../../../types/projectData"
 import styles from "./ProjectCard.module.scss"
 import { useState } from "react"
@@ -11,46 +11,45 @@ interface ProjectCardProps {
     data: projectData
 }
 
-const cardVariants = {
-    hover: {
-    },
-    initial: {
-    },
-}
+// const cardVariants = {
+//     hover: {
+//     },
+//     initial: {
+//     },
+// }
 
-const headerVariants = {
-    hover: {
-        color: "#2657eb",
-        width: "120%"
-    },
-    initial: {
-        color: "white",
-        width: "50%"
-    }
-}
+// const headerVariants = {
+//     hover: {
+//         color: "#2657eb",
+//         width: "120%"
+//     },
+//     initial: {
+//         color: "white",
+//         width: "50%"
+//     }
+// }
 
-const imageVariants = {
-    hover: {
-        scale: 1.25
-    },
-    initial: {
-        scale: 1
-    }
-}
+// const imageVariants = {
+//     hover: {
+//         scale: 1.25
+//     },
+//     initial: {
+//         scale: 1
+//     }
+// }
 
 export const ProjectCard = ({ data }: ProjectCardProps) => {
     const [isOpen, setIsOpen] = useState(false)
+    const [isHover, setIsHover] = useState(false)
 
     return (
         <motion.div
-            variants={cardVariants}
-            initial={"initial"}
-            whileHover={"hover"}
-            transition={{ duration: 0.3 }}
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
             className={styles.container}
             onClick={() => setIsOpen(prev => !prev)}>
-            <motion.img variants={imageVariants} transition={{ duration: 0.3 }} src={data.previewImage} alt={data.header} className={styles["preview-image"]} />
-            <motion.h1 variants={headerVariants} transition={{ duration: 0.2 }} className={styles["preview-header"]}>{data.header}</motion.h1>
+            <motion.img style={(!isOpen && isHover) ? { scale: 1.25, transition: "all 0.4s" } : { transition: "all 0.4s" }} transition={{ duration: 0.3 }} src={data.previewImage} alt={data.header} className={styles["preview-image"]} />
+            <motion.h1 style={(!isOpen && isHover) ? { color: "#2657eb", width: "110%", transition: "all 0.4s" } : { width: "50%", transition: "all 0.4s" }} transition={{ duration: 0.2 }} className={styles["preview-header"]}>{data.header}</motion.h1>
             <AnimatePresence>
                 {
                     isOpen &&
@@ -59,7 +58,7 @@ export const ProjectCard = ({ data }: ProjectCardProps) => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0, transition: { delay: 0.25 } }}
                         initial={{ opacity: 0 }} className={styles.modal}
-                        onClick={(e) => { e.stopPropagation(); setIsOpen(prev => !prev) }}>
+                        onClick={(e) => { e.stopPropagation(); setIsOpen(prev => !prev); setIsHover(false) }}>
                         <motion.div onClick={(e) => e.stopPropagation()} transition={{ delay: 0.075, duration: 0.5, type: "spring", stiffness: 75, damping: 16 }} animate={{ x: 0 }} exit={{ x: "-120%" }} initial={{ x: "-120%" }} className={styles["modal-slideshow"]}>
                             <div className={styles["carousel-wrapper"]}>
                                 <ProjectCardCarousel slides={data.images} />
@@ -74,7 +73,7 @@ export const ProjectCard = ({ data }: ProjectCardProps) => {
                                             <LiaExternalLinkAltSolid />
                                         </motion.button>
                                     </a>
-                                    <motion.button whileHover={{ scale: 1.1, borderRadius: "50%" }} transition={{ duration: 0.5, type: "spring", stiffness: 400, damping: 11 }} className={styles["bar-button"]} onClick={() => setIsOpen(prev => !prev)}>
+                                    <motion.button whileHover={{ scale: 1.1, borderRadius: "50%" }} transition={{ duration: 0.5, type: "spring", stiffness: 400, damping: 11 }} className={styles["bar-button"]} onClick={() => { setIsOpen(prev => !prev); setIsHover(false) }}>
                                         <IoMdCloseCircle />
                                     </motion.button>
                                 </div>
