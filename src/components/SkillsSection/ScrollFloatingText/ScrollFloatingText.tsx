@@ -1,7 +1,7 @@
 import { ScrollColorText } from "../../ScrollColorText/ScrollColorText"
 import styles from "./ScrollFloatingText.module.scss"
-import { RefObject, useEffect, useRef } from "react"
-import { motion, useScroll, useTransform, useMotionValueEvent, useSpring } from "framer-motion"
+import { useRef } from "react"
+import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 
 
 
