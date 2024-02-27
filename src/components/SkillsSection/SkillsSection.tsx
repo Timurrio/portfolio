@@ -27,7 +27,7 @@ export const SkillsSection = () => {
     return (
         <div className={styles.container}>
             <motion.div className={styles.info} variants={infoVariants} transition={{ staggerChildren: 0.2, duration: 1 }} initial={"hidden"} whileInView={"visible"} viewport={{ once: true, amount: 1 }}>
-                <h2 className={styles.header}>My Tech Stack 👨‍💻</h2>
+                <h2 className={styles.header}>My Tech Stack 🛠️</h2>
                 <motion.ul className={styles.stack}>
                     {
                         stackNames.map((str) => (

@@ -6,7 +6,14 @@ import { motion } from "framer-motion"
 export const ProjectsSection = () => {
     return (
         <div className={styles.container}>
-            <h1 className={styles.header}>PROJECTS</h1>
+            <motion.h1
+                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.4 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className={styles.header}>
+                PROJECTS 💻
+            </motion.h1>
             <div className={styles["card-list"]}>
                 {
                     data.map((projectData, index) => (
