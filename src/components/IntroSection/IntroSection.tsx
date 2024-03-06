@@ -1,5 +1,5 @@
 import styles from "./IntroSection.module.scss"
-import portrait from "../../assets/placeholderportrait.jpg"
+import portrait from "../../assets/portrait.jpg"
 import { motion } from "framer-motion"
 import { GithubIcon } from "../Icons/GithubIcon";
 import { LinkedinIcon } from "../Icons/LinkedinIcon"
