@@ -23,8 +23,9 @@ export const ProjectsSection = () => {
                             transition={{ duration: 0.4 }}
                             viewport={{ once: true, amount: 0.5 }}
                             className={styles["card-wrapper"]}
+                            key={index}
                         >
-                            <ProjectCard key={index} data={projectData} />
+                            <ProjectCard data={projectData} />
                         </motion.div>
                     ))
                 }

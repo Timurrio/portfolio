@@ -30,8 +30,8 @@ export const SkillsSection = () => {
                 <h2 className={styles.header}>My Tech Stack 🛠️</h2>
                 <motion.ul className={styles.stack}>
                     {
-                        stackNames.map((str) => (
-                            <motion.li variants={techVariants} transition={{ duration: 0.7, type: "spring", stiffness: 150, mass: 1.2 }}>
+                        stackNames.map((str, index) => (
+                            <motion.li key={index} variants={techVariants} transition={{ duration: 0.7, type: "spring", stiffness: 150, mass: 1.2 }}>
                                 {str}
                             </motion.li>
                         ))

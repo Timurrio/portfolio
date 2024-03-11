@@ -36,7 +36,7 @@ export default function ProjectCardCarousel({ slides }: ProjectCardCarouselProps
         <div className={styles["dot-container"]}>
           {
             slides.map((_, i) => (
-              <div className={`${styles.dot} ${i === activeSlide && styles["dot-active"]}`} onClick={() => setActiveSlide(i)} />
+              <div key={i} className={`${styles.dot} ${i === activeSlide && styles["dot-active"]}`} onClick={() => setActiveSlide(i)} />
             ))
           }
         </div>

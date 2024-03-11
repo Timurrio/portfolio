@@ -9,8 +9,8 @@ export const FooterSection = () => {
     const scrollContainerRef = useRef(null)
 
     return (
-        <footer className={styles.container}>
-            <div ref={scrollContainerRef} className={styles["scroll-container"]}>
+        <footer ref={scrollContainerRef} className={styles.container}>
+            <div className={styles["scroll-container"]}>
                 <div className={styles["footer-header"]}>
                     <ScrollColorText colors={["white", "white"]} target={scrollContainerRef} text="LET`S" scrollOffset={["start end", "end end"]} />
                     <ScrollColorText colors={["white", "white"]} target={scrollContainerRef} text="WORK" scrollOffset={["start end", "end end"]} />
