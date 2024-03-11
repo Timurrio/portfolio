@@ -1,4 +1,5 @@
 .container {
+    overflow-x: hidden;
     width: 100vw;
     background-color: #151515;
 }
@@ -12,9 +13,12 @@
 
 .footer-header {
     display: flex;
+    justify-content: center;
     max-width: 100%;
+    width: 100%;
     margin: 0px 10px;
     font-size: 70px;
+    // font-size: 5vw;
 }
 
 .mail-button-wrapper {
@@ -50,6 +54,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
+    padding: 10px;
     width: 100%;
     max-width: 900px;
 }
@@ -61,4 +66,72 @@
 
 .copyright-icons {
     display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer-header {
+        font-size: 50px;
+    }
+
+    .mail-button-link {
+        font-size: 30px;
+    }
+
+    .copyright-text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .scroll-container {
+        padding: 25px 0px;
+    }
+
+    .footer-header {
+        font-size: 8vw;
+        padding: 5px;
+
+        div {
+            padding: 5px;
+        }
+    }
+
+    .mail-button-link {
+        font-size: 5.5vw;
+    }
+
+    .mail-button {
+        padding: 10px;
+    }
+
+    .copyright-section {
+        margin-top: 50px;
+        flex-direction: column-reverse;
+    }
+
+    .copyright-text {
+        padding: 10px;
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        padding: 100px 0px;
+    }
+
+    .footer-header {
+        font-size: 16vw;
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            margin-top: 20px;
+        }
+    }
+
+    .copyright-text {
+        font-size: 4vw;
+        margin-top: 50px;
+    }
 }
