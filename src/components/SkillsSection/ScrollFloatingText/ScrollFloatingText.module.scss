@@ -1,9 +1,10 @@
 .container {
     position: absolute;
+    overflow-x: hidden;
     z-index: 10;
     width: 100vw;
     height: 100%;
-    font-size: 6vw;
+    font-size: 8vw;
     // font-family: "Permanent Marker", cursive;
     display: flex;
     align-items: flex-end;
@@ -16,8 +17,8 @@
     user-select: none;
 }
 
-// @media screen and (max-width: 1000px) {
-//     .container {
-//         font-size: 60px;
-//     }
-// }
+@media screen and (max-width: 400px) {
+    .container {
+        margin-bottom: 100vh;
+    }
+}

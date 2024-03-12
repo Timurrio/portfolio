@@ -20,7 +20,7 @@ export const ScrollFloatingText = () => {
     return (
         <motion.div className={styles.container} ref={containerRef} >
 
-            <motion.div className={styles["text-wrapper"]} style={{ y: currentY, rotate: rotation2, left: "8%" }}>
+            <motion.div className={styles["text-wrapper"]} style={{ y: currentY, rotate: rotation2, left: "20%" }}>
                 <ScrollColorText colors={["#CF649B", "#CF649B"]} text="SCSS" target={textRef} scrollOffset={["start end", "start 20%"]} />
             </motion.div>
             <motion.div ref={textRef} className={styles["text-wrapper"]} style={{ y: currentY, rotate: rotation1, bottom: "17%" }}>
@@ -29,7 +29,7 @@ export const ScrollFloatingText = () => {
             <motion.div className={styles["text-wrapper"]} style={{ y: currentY, rotate: rotation3, right: "5%", top: "5%" }}>
                 <ScrollColorText colors={["#E44D25", "#E44D25"]} text="HTML" target={textRef} scrollOffset={["start end", "start 20%"]} />
             </motion.div>
-            <motion.div className={styles["text-wrapper"]} style={{ y: currentY, rotate: rotation4, bottom: "10%", right: "8%" }}>
+            <motion.div className={styles["text-wrapper"]} style={{ y: currentY, rotate: rotation4, bottom: "10%", right: "20%" }}>
                 <ScrollColorText colors={["#61DBFB", "#61DBFB"]} text="REACT" target={textRef} scrollOffset={["start end", "start 20%"]} />
             </motion.div>
 
