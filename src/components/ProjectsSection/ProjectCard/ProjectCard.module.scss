@@ -63,7 +63,7 @@ $modalBackground: rgba($color: #151515, $alpha: 0.9);
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgba($color: black, $alpha: 0.5);
+    background-color: rgba($color: black, $alpha: 0.25);
     backdrop-filter: blur(5px);
     color: white;
 
@@ -106,6 +106,7 @@ $modalBackground: rgba($color: #151515, $alpha: 0.9);
 .bar-header {
     color: #2657eb;
     font-size: 48px;
+    white-space: nowrap;
 }
 
 .bar-links {
@@ -148,10 +149,123 @@ $modalBackground: rgba($color: #151515, $alpha: 0.9);
         font-size: 3vw;
     }
 
+    .modal {
+        flex-direction: column;
+    }
+
+    .modal-description {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        height: 45vh;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 0px;
+    }
+
+    .description-info {
+        margin-top: 30px;
+        overflow-y: scroll;
+        max-height: 100%;
+        padding: 10px;
+    }
+
+    .modal-slideshow {
+        width: 90vw;
+        height: 50vh;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+
+        .carousel-wrapper {
+            aspect-ratio: 1.7/1;
+            // width: 70%;
+            height: 90%;
+            width: auto;
+        }
+    }
+
+    .description-bar {
+        max-width: 100%;
+
+        .bar-header {
+            font-size: 48px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .modal-description {
+        width: 100vw;
+        height: 40vh;
+        padding: 10px;
+    }
+
+    .description-bar {
+        .bar-header {
+            // font-size: 7.5vw;
+            font-size: 45px;
+            padding: 10px;
+        }
+
+        .bar-links {
+            gap: 5px;
+            padding: 10px;
+
+            .bar-button {
+                // width: 7.5vw;
+                // font-size: 7.5vw;
+                width: 45px;
+                font-size: 45px;
+
+            }
+        }
+    }
+
+    .description-info {
+        font-size: 18px;
+    }
+
+    .modal-slideshow {
+        width: 100vw;
+        height: 60vh;
+
+        .carousel-wrapper {
+            aspect-ratio: auto;
+            width: 95%;
+            height: 90%;
+        }
+    }
 }
 
 @media screen and (max-width: 750px) {
     .preview-header {
         font-size: 6vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .description-bar {
+        .bar-header {
+            font-size: 7vw;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .description-bar {
+        margin-top: 20px;
+        flex-direction: column-reverse;
+
+        .bar-links {
+            width: 100%;
+            padding: 10px;
+            justify-content: space-between;
+        }
+    }
+
+    .description-info {
+        margin: 10px 0 0;
     }
 }

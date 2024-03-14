@@ -57,7 +57,8 @@ export const ProjectCard = ({ data }: ProjectCardProps) => {
                         transition={{ duration: 0.15 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0, transition: { delay: 0.25 } }}
-                        initial={{ opacity: 0 }} className={styles.modal}
+                        initial={{ opacity: 0 }}
+                        className={styles.modal}
                         onClick={(e) => { e.stopPropagation(); setIsOpen(prev => !prev); setIsHover(false) }}>
                         <motion.div onClick={(e) => e.stopPropagation()} transition={{ delay: 0.075, duration: 0.5, type: "spring", stiffness: 75, damping: 16 }} animate={{ x: 0 }} exit={{ x: "-120%" }} initial={{ x: "-120%" }} className={styles["modal-slideshow"]}>
                             <div className={styles["carousel-wrapper"]}>
