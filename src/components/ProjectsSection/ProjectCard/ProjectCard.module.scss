@@ -7,6 +7,8 @@ $modalBackground: rgba($color: #151515, $alpha: 0.9);
     overflow: hidden;
     width: 100%;
     height: 100%;
+    max-width: 500px;
+    max-height: 500px;
     background-color: black;
     color: white;
     border-radius: 20px;
@@ -40,6 +42,8 @@ $modalBackground: rgba($color: #151515, $alpha: 0.9);
     margin: 0;
     padding: 5px;
     background-color: $modalBackground;
+    white-space: nowrap;
+    font-size: 2vw;
     // border-bottom-left-radius: 20px;
     // border-top-right-radius: 20px;
     // width: 100%;
@@ -137,4 +141,17 @@ $modalBackground: rgba($color: #151515, $alpha: 0.9);
 .description-info {
     margin-top: 50px;
     font-size: 24px;
+}
+
+@media screen and (max-width: 1250px) {
+    .preview-header {
+        font-size: 3vw;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .preview-header {
+        font-size: 6vw;
+    }
 }

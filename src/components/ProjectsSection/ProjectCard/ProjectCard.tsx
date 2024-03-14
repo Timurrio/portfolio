@@ -48,8 +48,8 @@ export const ProjectCard = ({ data }: ProjectCardProps) => {
             onMouseLeave={() => setIsHover(false)}
             className={styles.container}
             onClick={() => setIsOpen(prev => !prev)}>
-            <motion.img style={(!isOpen && isHover) ? { scale: 1.25, transition: "all 0.4s" } : { transition: "all 0.4s" }} transition={{ duration: 0.3 }} src={data.previewImage} alt={data.header} className={styles["preview-image"]} />
-            <motion.h1 style={(!isOpen && isHover) ? { color: "#2657eb", width: "110%", transition: "all 0.4s" } : { width: "50%", transition: "all 0.4s" }} transition={{ duration: 0.2 }} className={styles["preview-header"]}>{data.header}</motion.h1>
+            <motion.img style={(isOpen || isHover) ? { scale: 1.25, transition: "all 0.4s" } : { transition: "all 0.4s" }} transition={{ duration: 0.3 }} src={data.previewImage} alt={data.header} className={styles["preview-image"]} />
+            <motion.h1 style={(isOpen || isHover) ? { color: "#2657eb", width: "110%", transition: "all 0.4s" } : { width: "75%", transition: "all 0.4s" }} transition={{ duration: 0.2 }} className={styles["preview-header"]}>{data.header}</motion.h1>
             <AnimatePresence>
                 {
                     isOpen &&

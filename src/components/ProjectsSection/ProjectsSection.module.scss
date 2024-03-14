@@ -11,12 +11,13 @@
 .header {
     color: #2657eb;
     display: inline-block;
-    width: 30vw;
+    width: auto;
     align-self: center;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 15px 30px;
     border-radius: 20px;
-    font-size: 70px;
+    font-size: 72px;
+    white-space: nowrap;
     text-align: center;
     margin: 50px 0px 150px;
 }
@@ -24,6 +25,7 @@
 .card-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
     gap: 50px;
     padding: 0px 15px 300px;
 }
@@ -39,7 +41,16 @@
 }
 
 @media screen and (max-width: 750px) {
+    .container {
+        padding: 20px;
+    }
+
     .card-list {
         grid-template-columns: 1fr;
+        padding: 0 0 300px
+    }
+
+    .header {
+        font-size: 10vw;
     }
 }
