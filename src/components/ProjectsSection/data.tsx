@@ -1,7 +1,5 @@
 import React from "react";
 import { projectData } from "../../types/projectData";
-import imagePlaceholder from "../../assets/placeholder.jpg"
-import gifPlaceholder from "../../assets/placeholderGif.gif"
 
 import ecommercePreview from "../../assets/ecommerce/ecommercePreview.png"
 import ecommerce1 from "../../assets/ecommerce/ecommerce1.png"
@@ -17,10 +15,11 @@ import pokedex4 from "../../assets/pokedex/pokedex4.png"
 
 
 import easybankPreview from "../../assets/easybank/easybankPreview.png"
-import easybank1 from "../../assets/easybank/easybank1.png"
 import easybank2 from "../../assets/easybank/easybank2.png"
 import easybank3 from "../../assets/easybank/easybank3.png"
-import easybank4 from "../../assets/easybank/easybank4.png"
+import easybank5 from "../../assets/easybank/easybank5.png"
+import easybank6 from "../../assets/easybank/easybank6.png"
+
 
 
 import todoPreview from "../../assets/todo/todoPreview.png"
@@ -135,7 +134,7 @@ export const data: projectData[] = [
     {
         previewImage: easybankPreview,
         header: "Bank Landing",
-        images: [easybank1, easybank2, easybank3, easybank4],
+        images: [easybank5, easybank6, easybank2, easybank3, ],
         link: "https://timurrio.github.io/easybank-landing/",
         description: <EasybankDescription />
     },
