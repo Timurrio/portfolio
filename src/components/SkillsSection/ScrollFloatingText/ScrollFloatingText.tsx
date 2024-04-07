@@ -11,10 +11,10 @@ export const ScrollFloatingText = () => {
     const textRef = useRef(null)
     const { scrollYProgress } = useScroll({ target: textRef, offset: ["start end", "end start"] })
     const currentY = useTransform(useSpring(scrollYProgress), [0, 1], ['0vh', '-100vh'])
-    const rotation1 = useTransform(useSpring(scrollYProgress), [0, 1], ['-13deg', '13deg'])
-    const rotation2 = useTransform(useSpring(scrollYProgress), [0, 1], ['8deg', '-18deg'])
-    const rotation3 = useTransform(useSpring(scrollYProgress), [0, 1], ['15deg', '-13deg'])
-    const rotation4 = useTransform(useSpring(scrollYProgress), [0, 1], ['-8deg', '18deg'])
+    const rotation1 = useTransform(scrollYProgress, [0, 1], ['-13deg', '13deg'])
+    const rotation2 = useTransform(scrollYProgress, [0, 1], ['8deg', '-18deg'])
+    const rotation3 = useTransform(scrollYProgress, [0, 1], ['15deg', '-13deg'])
+    const rotation4 = useTransform(scrollYProgress, [0, 1], ['-8deg', '18deg'])
 
 
     return (
