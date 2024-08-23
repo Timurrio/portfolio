@@ -7,7 +7,6 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 
 
 export const ScrollFloatingText = () => {
-    const containerRef = useRef(null)
     const textRef = useRef(null)
     const { scrollYProgress } = useScroll({ target: textRef, offset: ["start end", "end start"] })
     const currentY = useTransform(useSpring(scrollYProgress), [0, 1], ['0vh', '-100vh'])
@@ -18,7 +17,7 @@ export const ScrollFloatingText = () => {
 
 
     return (
-        <motion.div className={styles.container} ref={containerRef} >
+        <motion.div className={styles.container} >
 
             <motion.div className={styles["text-wrapper"]} style={{ y: currentY, rotate: rotation2, left: "20%" }}>
                 <ScrollColorText colors={["#CF649B", "#CF649B"]} text="SCSS" target={textRef} scrollOffset={["start end", "start 20%"]} />
