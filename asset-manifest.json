@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.64e96df2.css",
+    "main.css": "./static/css/main.6dae32f8.css",
     "main.js": "./static/js/main.075281bf.js",
     "static/media/easybank6.png": "./static/media/easybank6.e2d537ddeee87d263002.png",
     "static/media/ecommercePreview.png": "./static/media/ecommercePreview.d5d1a769882b40be0402.png",
@@ -24,11 +24,11 @@
     "static/media/pokedexPreview.jpg": "./static/media/pokedexPreview.be1754f44da0221fab93.jpg",
     "static/media/inkBg.png": "./static/media/inkBg.1242cb893f4c88b13c27.png",
     "index.html": "./index.html",
-    "main.64e96df2.css.map": "./static/css/main.64e96df2.css.map",
+    "main.6dae32f8.css.map": "./static/css/main.6dae32f8.css.map",
     "main.075281bf.js.map": "./static/js/main.075281bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.64e96df2.css",
+    "static/css/main.6dae32f8.css",
     "static/js/main.075281bf.js"
   ]
 }
