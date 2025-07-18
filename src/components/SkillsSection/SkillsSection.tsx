@@ -2,7 +2,7 @@ import { ScrollFloatingText } from "./ScrollFloatingText/ScrollFloatingText"
 import styles from "./SkillsSection.module.scss"
 import { motion } from "framer-motion"
 
-const stackNames = ["HTML", "CSS (SCSS)", "Javascript (Typescript)", "React", "Redux", "Framer Motion (animation)"]
+const stackNames = ["HTML", "CSS (SCSS)", "Javascript (Typescript)", "React", "Redux", "Next", "React Native"]
 const infoVariants = {
     hidden: {
         opacity: 0,

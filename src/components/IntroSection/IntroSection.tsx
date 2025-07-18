@@ -51,7 +51,8 @@ const IntroSection = () => {
                     transition={{ duration: 1.25, type: "spring" }}
                 >
                     <h1 className={styles["info-header"]}>FRONTEND REACT DEVELOPER</h1>
-                    <p className={styles["info-text"]}>Hi, I`m Tymur Myronenko, a frontend react developer based in Kryvyi Rih, Ukraine. Currently, a <a target="_blank" href="https://www.duet.edu.ua/en" rel="noreferrer" className={styles.link}>State University of Economics and Technology (SUET)</a> student, earning a Bachelors Degree in Computer Science  👨🏻‍💻</p>
+                    <p className={styles["info-text"]}>Hi, I`m Tymur Myronenko, a frontend react developer with Bachelors Degree in Computer Science  👨🏻‍💻 based in Kryvyi Rih, Ukraine.</p>
+                    {/* Currently, a <a target="_blank" href="https://www.duet.edu.ua/en" rel="noreferrer" className={styles.link}>State University of Economics and Technology (SUET)</a> student, earning a Bachelors Degree in Computer Science  👨🏻‍💻 */}
                     <div className={styles["info-icons"]}>
                         <GithubIcon />
                         <LinkedinIcon />

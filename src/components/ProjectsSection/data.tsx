@@ -1,6 +1,13 @@
 import React from "react";
 import { projectData } from "../../types/projectData";
 
+import ycdirectoryPreview from "../../assets/ycdirectory/ycDirectoryPreview.png"
+import ycdirectory1 from "../../assets/ycdirectory/ycDirectory1.png"
+import ycdirectory2 from "../../assets/ycdirectory/ycDirectory2.png"
+import ycdirectory3 from "../../assets/ycdirectory/ycDirectory3.png"
+import ycdirectory4 from "../../assets/ycdirectory/ycDirectory4.png"
+import ycdirectory5 from "../../assets/ycdirectory/ycDirectory5.png"
+
 import ecommercePreview from "../../assets/ecommerce/ecommercePreview.png"
 import ecommerce1 from "../../assets/ecommerce/ecommerce1.png"
 import ecommerce2 from "../../assets/ecommerce/ecommerce2.png"
@@ -26,6 +33,14 @@ import todoPreview from "../../assets/todo/todoPreview.png"
 import todo1 from "../../assets/todo/todo1.png"
 import todo2 from "../../assets/todo/todo2.png"
 import todo3 from "../../assets/todo/todo3.png"
+
+import moviePreview from "../../assets/movieapp/movieappPreview.png"
+import movie1 from "../../assets/movieapp/movieapp1.png"
+import movie2 from "../../assets/movieapp/movieapp2.png"
+import movie3 from "../../assets/movieapp/movieapp3.png"
+import movie4 from "../../assets/movieapp/movieapp4.png"
+import movie5 from "../../assets/movieapp/movieapp5.png"
+
 
 
 // const DescriptionPlaceholder: React.FC = () => {
@@ -115,8 +130,50 @@ const TodoDescription: React.FC = () => {
     )
 }
 
+const YcDirectoryDescription: React.FC = () => {
+    return (
+        <div>
+            <p>
+                A web platform for discovering, sharing, and exploring startup ideas. Users can log in using GitHub OAuth, create their own startup posts using Markdown, and browse submissions from others.
+            </p>
+            <p>
+                DEMO WEBSITE: <a href="https://yc-directory-two-sigma.vercel.app/" target="_blank ">Yc-Directory</a>
+            </p>
+            <p>
+                 GITHUB REPOSITORY: <a href="https://github.com/Timurrio/yc-directory" target="_blank">GITHUB</a>
+            </p>
+        </div>
+    )
+}
+
+const MovieAppDescription: React.FC = () => {
+    return (
+        <div>
+            <p>
+                A mobile application for browsing and exploring movies with detailed information and personalized features. Users can search for movies, view detailed pages with full metadata, and save their favorite films. Popular search trends are tracked and displayed. Authentication and database functionality are implemented via <a href="https://appwrite.io/">Appwrite</a>, while movie data is sourced from the <a href="https://www.themoviedb.org/documentation/api">TMDB API</a>.
+            </p>
+            <p>
+                GITHUB REPOSITORY: <a href="https://github.com/Timurrio/movies_mobile_app" target="_blank">GITHUB</a>                
+            </p>
+        </div>
+    )
+}
 
 export const data: projectData[] = [
+    {
+        previewImage: ycdirectoryPreview,
+        header: "Startup platform",
+        images: [ycdirectory1, ycdirectory2, ycdirectory4, ycdirectory5],
+        link: "https://yc-directory-two-sigma.vercel.app/",
+        description: <YcDirectoryDescription/>
+    },
+    {
+        previewImage: moviePreview,
+        header: "Movie App",
+        images: [movie1, movie2, movie3, movie4, movie5],
+        link: "https://github.com/Timurrio/movies_mobile_app",
+        description: <MovieAppDescription/>
+    },
     {
         previewImage: ecommercePreview,
         header: "E-commerce",

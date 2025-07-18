@@ -26,7 +26,7 @@ export const FooterSection = () => {
                 </div>
 
                 <div className={styles["copyright-section"]}>
-                    <p className={styles["copyright-text"]}>© Myronenko Tymur. All rights are reserved 2024.</p>
+                    <p className={styles["copyright-text"]}>© Myronenko Tymur. All rights are reserved 2025.</p>
                     <div className={styles["copyright-icons"]}>
                         <GithubIcon />
                         <LinkedinIcon />
