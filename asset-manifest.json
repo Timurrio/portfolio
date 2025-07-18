@@ -1,34 +1,45 @@
 {
   "files": {
-    "main.css": "./static/css/main.6dae32f8.css",
-    "main.js": "./static/js/main.075281bf.js",
+    "main.css": "./static/css/main.11944201.css",
+    "main.js": "./static/js/main.febae9a0.js",
     "static/media/easybank6.png": "./static/media/easybank6.e2d537ddeee87d263002.png",
+    "static/media/movieappPreview.png": "./static/media/movieappPreview.7a20ce752307fc69897a.png",
     "static/media/ecommercePreview.png": "./static/media/ecommercePreview.d5d1a769882b40be0402.png",
     "static/media/ecommerce1.png": "./static/media/ecommerce1.6f0caf5c57364823dd35.png",
     "static/media/easybank5.png": "./static/media/easybank5.cb4cd16c0d50f213aa3d.png",
     "static/media/easybank3.png": "./static/media/easybank3.83d44d2ba9b14bf4f55c.png",
+    "static/media/movieapp1.png": "./static/media/movieapp1.7ba93d05615ea531e6ce.png",
+    "static/media/movieapp4.png": "./static/media/movieapp4.ecd737609076e194f6e9.png",
+    "static/media/ycDirectory4.png": "./static/media/ycDirectory4.d37d2a180358a8fb954e.png",
+    "static/media/movieapp3.png": "./static/media/movieapp3.315d6d7833a24a4c0495.png",
     "static/media/easybankPreview.png": "./static/media/easybankPreview.41d4042fa771348bd666.png",
     "static/media/pokedex1.png": "./static/media/pokedex1.cb42de8c152ddbb5198c.png",
+    "static/media/ycDirectoryPreview.png": "./static/media/ycDirectoryPreview.e405a279878bff9503ac.png",
     "static/media/pokedex2.png": "./static/media/pokedex2.a1c1f1bad2c0198cadc5.png",
     "static/media/todo2.png": "./static/media/todo2.1e1ccc41e51eeacd908c.png",
     "static/media/todo3.png": "./static/media/todo3.f4a91d33d8b4d32e9c02.png",
     "static/media/todo1.png": "./static/media/todo1.12bd4a367e5d63b5a4b1.png",
     "static/media/ecommerce4.png": "./static/media/ecommerce4.e1cfc91a07e5e6d94cf5.png",
+    "static/media/ycDirectory2.png": "./static/media/ycDirectory2.be059938e5ecb5b98146.png",
     "static/media/pokedex3.png": "./static/media/pokedex3.7d9221fc186e433a2be2.png",
     "static/media/ecommerce3.png": "./static/media/ecommerce3.cd0ef9f687f1a37186b8.png",
     "static/media/todoPreview.png": "./static/media/todoPreview.84ac3b7140110922ad70.png",
+    "static/media/movieapp5.png": "./static/media/movieapp5.e9723ed3106210419900.png",
     "static/media/ecommerce2.png": "./static/media/ecommerce2.3ee75460aef099aefd6a.png",
     "static/media/pokedex4.png": "./static/media/pokedex4.af5e26205ac05be91524.png",
     "static/media/portrait.jpg": "./static/media/portrait.e3c1e9f066ffd65cf108.jpg",
+    "static/media/movieapp2.png": "./static/media/movieapp2.c36307da57e6c49e3aff.png",
     "static/media/easybank2.png": "./static/media/easybank2.211bc39ea5bf34dd0bef.png",
     "static/media/pokedexPreview.jpg": "./static/media/pokedexPreview.be1754f44da0221fab93.jpg",
+    "static/media/ycDirectory1.png": "./static/media/ycDirectory1.ab27489fe69d6b4fe499.png",
+    "static/media/ycDirectory5.png": "./static/media/ycDirectory5.00a80bd81f074786796f.png",
     "static/media/inkBg.png": "./static/media/inkBg.1242cb893f4c88b13c27.png",
     "index.html": "./index.html",
-    "main.6dae32f8.css.map": "./static/css/main.6dae32f8.css.map",
-    "main.075281bf.js.map": "./static/js/main.075281bf.js.map"
+    "main.11944201.css.map": "./static/css/main.11944201.css.map",
+    "main.febae9a0.js.map": "./static/js/main.febae9a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.6dae32f8.css",
-    "static/js/main.075281bf.js"
+    "static/css/main.11944201.css",
+    "static/js/main.febae9a0.js"
   ]
 }
